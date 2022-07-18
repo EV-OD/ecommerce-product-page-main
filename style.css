@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.1em;
+}
+body{
+    min-height: 100vh;
+}
+.flex{
+    display: flex;
+}
+.f-row{
+ flex-direction: row;   
+}
+.f-col{
+    flex-direction: column;
+}
+.f-right{
+    margin-left: auto;
+}
+
+.f-a-center{
+    align-items: center;
+}
+.f-j-center{
+    justify-content: center;
+}
+.f-space-around{
+    justify-content: space-around;
+}
+.f-space-evenly{
+    justify-content: space-evenly;
+}
+
+.f-space-between{
+    justify-content: space-between;
+}
+.transparent{
+    background-color: transparent;
+}
+.no-border{
+    border: none;
+}
+.ml-10{
+    margin-left: 10px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.pl-10{
+    padding-left: 10px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+
+.pl-20{
+    padding-left: 20px;
+}
+.pr-20{
+    padding-right: 20px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+.pb-10{
+    padding-bottom: 10px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.topbar{
+    height: 80px;
+}
+svg path{
+    fill: rgb(118, 115, 115);
+}
+
+.card-area{
+    width: 100vw;
+    margin-bottom: auto;
+    /* transform: translateY(-70px); */
+    justify-content: center;
+}
+.image-ui,.preview{
+}
+.preview > img{
+    width: 500px;
+    object-fit: cover;
+    height: 300px;
+    max-width: 500px;
+}
+h6{
+    font-size: 0.7em;
+    color: orange;
+}
+h1{
+    font-size: 1.3em;
+    max-width: 80%;
+}
+p,span{
+    font-size: 0.8em;
+    color: rgb(97, 97, 97);
+}
+p{
+    font-size: 16px;
+    color: hsl(219, 9%, 45%);
+    font-weight: normal;
+}
+
+
+.price .mrp{
+    margin-right: 50px;
+    text-decoration:line-through;
+    opacity: 0.5;
+    font-size: 0.7em;
+}
+.price span.discount{
+    font-size: 0.6em;
+    background-color: rgb(250, 237, 212);
+    color: orange;
+    padding: 6px;
+    border-radius: 5px;
+    
+}
+.cart-to-btn{
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    padding-block: 13px;
+    border-radius: 8px;
+    font-size: 0.65em;
+    box-shadow: 0px 7px 10pt 0pt #00000042;
+    width: 100%;
+}
+.cart-to-btn svg path{
+    fill: white;
+}
+.quantity{
+    background-color: rgba(163, 189, 244, 0.093);
+    color: orange;
+    font-size: 1.2em;
+    padding-block: 7px;
+    width: 100%;
+}
+.quantity .number{
+    font-size: 0.7em;
+}
+.quantity :not(.number){
+    font-weight: bold;
+}
+.description{
+    max-width: 500px;
+    gap: 10px;
+}
+.gallery-area{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.gallery{
+    display: none;
+    gap: 10px;
+    justify-content: space-around;
+}
+.gallery img{
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 0 0 1pt 1.5pt rgb(245, 150, 42);
+}
+
+.cart-ui{
+    flex-wrap: wrap;
+}
+.sidebar-full{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 14, 14, 0.498);
+}
+.sidebar-area{
+    width:  60vw;
+    height: 100%;
+    background-color: white;
+    
+}
+.sidebar-area  a{
+    width: 100%;
+    height: 50px;
+    margin-block: 3px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85em;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.sidebar-area  a:hover{
+    background-color: #cdcbcb42;
+}
+.sidebar-area .logo{
+    margin-right: 30px;
+}
+.sidebar-area svg{
+    width: 0.8em;
+}
+.sidebar-area .logo svg path{
+    fill: black;
+}
+.sidebar-area .handler .menu{
+    --radius:40px;
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sidebar-area .handler .menu svg{
+    transform: translateX(5px);
+}
+.sidebar-area .handler .menu:hover{
+    background-color: #b0b0b042;
+
+}
+@media screen and (min-width:500px) {
+    .preview > img{
+        border-radius: 10px;
+        width: 500px;
+        object-fit: cover;
+        height: 400px;
+        max-width: 500px;
+    }
+}
+@media screen and (min-width:1000px) {
+    .card-area{
+        flex-direction: row;
+        gap: 6%;
+    }
+    .gallery{
+        display: flex;
+    }
+    .price{
+        flex-direction: column;
+    }
+    .price .mrp{
+        margin-left: 0;
+    }
+    .quantity{
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: translateY(9px);
+    }
+    .content{
+        margin-top: 100px;
+    }
+    .cart-to-btn{
+        width: 50%;
+    }
+    .quantity{
+        width: 40%;
+    }
+}
