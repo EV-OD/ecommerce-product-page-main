@@ -112,9 +112,20 @@ svg path{
     justify-content: center;
 }
 .image-ui,.preview{
+    position: relative;
+}
+.preview .cart-area{
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    height: 90%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: white;
 }
 .preview > img{
-    width: 500px;
+    width: 100vw;
     object-fit: cover;
     height: 300px;
     max-width: 500px;
@@ -204,13 +215,18 @@ p{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(14, 14, 14, 0.498);
+    left: -100%;
+    transition: left 0.2s cubic-bezier(.35,.54,.62,.98);
+    z-index: 100;
 }
 .sidebar-area{
     width:  60vw;
     height: 100%;
     background-color: white;
     
+}
+.sidebar-full-open{
+    left: 0%;
 }
 .sidebar-area  a{
     width: 100%;
@@ -244,6 +260,21 @@ p{
     align-items: center;
     cursor: pointer;
 }
+.circular-hover{
+    --radius:40px;
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.circular-hover:hover{
+    --bg:#b0b0b042;
+    background-color: var(--bg);
+
+}
 .sidebar-area .handler .menu svg{
     transform: translateX(5px);
 }
@@ -251,12 +282,56 @@ p{
     background-color: #b0b0b042;
 
 }
+
+.leftbar .menu{
+    --radius:40px;
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.leftbar .menu:hover{
+    background-color: #b0b0b042;
+}
+.cart-area{
+    display: none;
+    font-size: 0.7em;
+}
+.cart-area-active{
+    display: flex;
+}
+.cart-area > .title{
+    border-bottom: 1px solid silver;
+}
+.cart-area .items:hover{
+    background-color: rgb(0, 123, 255);
+    color: white;
+}
+.cart-area .items:hover .detail, 
+.cart-area .items:hover .price{
+    color: white;
+}
+.cart-area .items:hover path{
+    fill: white;
+}
+
+
+.cart-area .detail{
+    font-size: 0.8em;
+    letter-spacing: 2.5px;
+    color: rgb(90, 90, 90);
+}
+.cart-area .detail .price{
+    font-weight: 200;
+    color: black;
+}
 @media screen and (min-width:500px) {
     .preview > img{
         border-radius: 10px;
         width: 500px;
-        object-fit: cover;
-        height: 400px;
         max-width: 500px;
     }
 }
